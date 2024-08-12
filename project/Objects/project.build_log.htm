@@ -1,0 +1,562 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: •ÏVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Juhyeon Lee, Sogang University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\uVision\project\project.uvprojx
+Project File Date:  06/24/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103RB/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |             ^
+RTE/Device/STM32F103RB/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |     ^
+RTE/Device/STM32F103RB/system_stm32f10x.c(408): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  408 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+2 warnings generated.
+compiling system_stm32f10x.c...
+main_program_rx.c(2): warning: In file included from...
+./update_data.h(5): warning: In file included from...
+./control.h(10): warning: no previous extern declaration for non-static variable 'mode' [-Wmissing-variable-declarations]
+   10 | int mode = 0;
+      |     ^
+./control.h(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   10 | int mode = 0;
+      | ^
+./control.h(13): warning: no previous extern declaration for non-static variable 'pw1' [-Wmissing-variable-declarations]
+   13 | const int pw1 = 0;
+      |           ^
+./control.h(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   13 | const int pw1 = 0;
+      |       ^
+./control.h(14): warning: initializing 'int *' with an expression of type 'const int *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+   14 | int * pw = &pw1;
+      |       ^    ~~~~
+./control.h(14): warning: no previous extern declaration for non-static variable 'pw' [-Wmissing-variable-declarations]
+./control.h(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   14 | int * pw = &pw1;
+      | ^
+./control.h(16): warning: no previous extern declaration for non-static variable 'font8x8' [-Wmissing-variable-declarations]
+   16 | u8 font8x8[20] [8] = {
+      |    ^
+./control.h(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   16 | u8 font8x8[20] [8] = {
+      | ^
+./control.h(113): warning: no previous prototype for function 'init_passcode' [-Wmissing-prototypes]
+  113 | void init_passcode(void) {
+      |      ^
+./control.h(113): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  113 | void init_passcode(void) {
+      | ^
+      | static 
+./control.h(118): warning: no previous prototype for function 'get_mem_addr' [-Wmissing-prototypes]
+  118 | void get_mem_addr(int *mem) {
+      |      ^
+./control.h(118): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  118 | void get_mem_addr(int *mem) {
+      | ^
+      | static 
+./control.h(122): warning: no previous prototype for function 'save_passcode_to_flashmem' [-Wmissing-prototypes]
+  122 | void save_passcode_to_flashmem(void) {  
+      |      ^
+./control.h(122): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  122 | void save_passcode_to_flashmem(void) {  
+      | ^
+      | static 
+./control.h(129): warning: no previous prototype for function 'load_passcode_from_flashmem' [-Wmissing-prototypes]
+  129 | void load_passcode_from_flashmem(void) {
+      |      ^
+./control.h(129): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  129 | void load_passcode_from_flashmem(void) {
+      | ^
+      | static 
+./control.h(137): warning: no previous prototype for function 'disable_TIM1_TIM2' [-Wmissing-prototypes]
+  137 | void disable_TIM1_TIM2(void) {
+      |      ^
+./control.h(137): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  137 | void disable_TIM1_TIM2(void) {
+      | ^
+      | static 
+./control.h(144): warning: no previous prototype for function 'enable_TIM1_TIM2' [-Wmissing-prototypes]
+  144 | void enable_TIM1_TIM2(void) {
+      |      ^
+./control.h(144): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  144 | void enable_TIM1_TIM2(void) {
+      | ^
+      | static 
+./control.h(149): warning: no previous prototype for function 'reset_display' [-Wmissing-prototypes]
+  149 | void reset_display(void) {
+      |      ^
+./control.h(149): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  149 | void reset_display(void) {
+      | ^
+      | static 
+./control.h(157): warning: no previous prototype for function 'reset_buffer' [-Wmissing-prototypes]
+  157 | void reset_buffer(void) {
+      |      ^
+./control.h(157): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  157 | void reset_buffer(void) {
+      | ^
+      | static 
+./control.h(186): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  186 |                                 display.col[i] |= font8x8[19][i] << 8;
+      |                                                ~~ ~~~~~~~~~~~~~~~^~~~
+./control.h(164): warning: no previous prototype for function 'start_mode' [-Wmissing-prototypes]
+  164 | void start_mode(int n) {
+      |      ^
+./control.h(164): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  164 | void start_mode(int n) {
+      | ^
+      | static 
+./control.h(196): warning: no previous prototype for function 'end_mode1_5' [-Wmissing-prototypes]
+  196 | void end_mode1_5(void) {
+      |      ^
+./control.h(196): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  196 | void end_mode1_5(void) {
+      | ^
+      | static 
+./control.h(207): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  207 |                 display.col[i] |= font8x8[n][i] << 8;
+      |                                ~~ ~~~~~~~~~~~~~~^~~~
+./control.h(205): warning: no previous prototype for function 'set_sign' [-Wmissing-prototypes]
+  205 | void set_sign(int n) {
+      |      ^
+./control.h(205): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  205 | void set_sign(int n) {
+      | ^
+      | static 
+./control.h(220): warning: no newline at end of file [-Wnewline-eof]
+  220 | #endif
+      |       ^
+./control.h(212): warning: no previous prototype for function 'remove_sign' [-Wmissing-prototypes]
+  212 | void remove_sign(void) {
+      |      ^
+./control.h(212): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  212 | void remove_sign(void) {
+      | ^
+      | static 
+main_program_rx.c(2): warning: In file included from...
+./update_data.h(89): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+   89 |                         data.temperature = (float)(((data.temperature * 5) / 4096) - 0.75) *100;
+      |                                                     ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~  ~
+main_program_rx.c(4): warning: In file included from...
+./scroll.h(26): warning: array subscript is of type 'char' [-Wchar-subscripts]
+   26 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 - 1]][i] << (8 + (scroll.data_shift % 8));
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(26): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+   26 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 - 1]][i] << (8 + (scroll.data_shift % 8));
+      |                                        ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(27): warning: array subscript is of type 'char' [-Wchar-subscripts]
+   27 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8]][i] << (scroll.data_shift % 8);
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(27): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+   27 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8]][i] << (scroll.data_shift % 8);
+      |                                        ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(28): warning: array subscript is of type 'char' [-Wchar-subscripts]
+   28 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 + 1]][i] >> (8 - (scroll.data_shift % 8));
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(46): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+   46 |                         display.col[i] |= font8x8[buffer.item[buffer.idx - 1]][i] << (scroll.data_shift % 8);
+      |                                        ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(47): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+   47 |                         display.col[i] |= font8x8[buffer.item[buffer.idx]][i] << (8 - (scroll.data_shift % 8));
+      |                                        ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main_program_rx.c(6): warning: In file included from...
+./usart_rx.h(6): warning: In file included from...
+./flash.h(13): warning: no previous extern declaration for non-static variable 'flash_page_addr' [-Wmissing-variable-declarations]
+   13 | u32 flash_page_addr = 0x0801F800;
+      |     ^
+./flash.h(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   13 | u32 flash_page_addr = 0x0801F800;
+      | ^
+./flash.h(29): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   29 |     FLASH->CR &= ~0x00000002;  
+      |               ~~ ^~~~~~~~~~~
+./flash.h(32): warning: declaration shadows a variable in the global scope [-Wshadow]
+   32 | void flash_write(u32 addr, u16 data) {
+      |                                ^
+./control.h(50): note: previous declaration is here
+   50 | DATA data;
+      |      ^
+main_program_rx.c(6): warning: In file included from...
+./usart_rx.h(6): warning: In file included from...
+./flash.h(38): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   38 |     FLASH->CR &= ~0x00000001; 
+      |               ~~ ^~~~~~~~~~~
+./flash.h(50): warning: comparison of integers of different signs: 'u32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+   50 |         for(u32 i=1; i<=length; i++) {
+      |                      ~^ ~~~~~~
+./flash.h(57): warning: comparison of integers of different signs: 'u32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+   57 |         for(u32 i=1; i<=length; i++) {
+      |                      ~^ ~~~~~~
+main_program_rx.c(6): warning: In file included from...
+./usart_rx.h(59): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+   59 |                                 set_time(buffer.item[1]*10 + buffer.item[2], buffer.item[3]*10 + buffer.item[4], buffer.item[5]*10 + buffer.item[6]);
+      |                                 ~~~~~~~~                                                                         ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+./usart_rx.h(59): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+   59 |                                 set_time(buffer.item[1]*10 + buffer.item[2], buffer.item[3]*10 + buffer.item[4], buffer.item[5]*10 + buffer.item[6]);
+      |                                 ~~~~~~~~                                     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+./usart_rx.h(59): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+   59 |                                 set_time(buffer.item[1]*10 + buffer.item[2], buffer.item[3]*10 + buffer.item[4], buffer.item[5]*10 + buffer.item[6]);
+      |                                 ~~~~~~~~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+./usart_rx.h(70): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+   70 |                                 int is_right = 1;
+      |                                     ^
+./usart_rx.h(27): warning: no previous prototype for function 'USART1_IRQHandler' [-Wmissing-prototypes]
+   27 | void USART1_IRQHandler(void) {
+      |      ^
+./usart_rx.h(27): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   27 | void USART1_IRQHandler(void) {
+      | ^
+      | static 
+main_program_rx.c(2): warning: In file included from...
+./update_data.h(5): warning: In file included from...
+./control.h(11): warning: no previous extern declaration for non-static variable 'base_addr' [-Wmissing-variable-declarations]
+   11 | int * base_addr;
+      |       ^
+./control.h(11): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   11 | int * base_addr;
+      | ^
+./control.h(50): warning: no previous extern declaration for non-static variable 'data' [-Wmissing-variable-declarations]
+   50 | DATA data;
+      |      ^
+./control.h(50): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   50 | DATA data;
+      | ^
+./control.h(107): warning: no previous extern declaration for non-static variable 'display' [-Wmissing-variable-declarations]
+  107 | DISPLAY display;
+      |         ^
+./control.h(107): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  107 | DISPLAY display;
+      | ^
+./control.h(108): warning: no previous extern declaration for non-static variable 'keyscan' [-Wmissing-variable-declarations]
+  108 | KEYSCAN keyscan;
+      |         ^
+./control.h(108): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  108 | KEYSCAN keyscan;
+      | ^
+./control.h(109): warning: no previous extern declaration for non-static variable 'scroll' [-Wmissing-variable-declarations]
+  109 | SCROLL scroll;
+      |        ^
+./control.h(109): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  109 | SCROLL scroll;
+      | ^
+./control.h(110): warning: no previous extern declaration for non-static variable 'buffer' [-Wmissing-variable-declarations]
+  110 | BUFFER buffer;
+      |        ^
+./control.h(110): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  110 | BUFFER buffer;
+      | ^
+./control.h(111): warning: no previous extern declaration for non-static variable 'passcode' [-Wmissing-variable-declarations]
+  111 | PASSCODE passcode;
+      |          ^
+./control.h(111): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  111 | PASSCODE passcode;
+      | ^
+./control.h(57): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   57 |                 data.data[1] = hour % 10;
+      |                 ^~~~~~~~~
+./control.h(58): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   58 |                 data.data[3] = min / 10;
+      |                 ^~~~~~~~~
+./control.h(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |                 data.data[4] = min % 10;
+      |                 ^~~~~~~~~
+./control.h(60): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   60 |                 data.data[6] = sec / 10;
+      |                 ^~~~~~~~~
+./control.h(61): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   61 |                 data.data[7] = sec % 10;
+      |                 ^~~~~~~~~
+./control.h(125): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  125 |                 base_addr[i] = passcode.item[i];
+      |                 ^~~~~~~~~
+./control.h(125): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  125 |                 base_addr[i] = passcode.item[i];
+      |                                ^~~~~~~~~~~~~
+./control.h(133): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  133 |                 passcode.item[i] = mem[i];
+      |                 ^~~~~~~~~~~~~
+./control.h(133): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  133 |                 passcode.item[i] = mem[i];
+      |                                    ^~~
+./control.h(151): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  151 |                 display.col[i] = 0;
+      |                 ^~~~~~~~~~~
+./control.h(159): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  159 |                 buffer.item[i] = 0xE;
+      |                 ^~~~~~~~~~~
+./control.h(186): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  186 |                                 display.col[i] |= font8x8[19][i] << 8;
+      |                                 ^~~~~~~~~~~
+./control.h(186): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  186 |                                 display.col[i] |= font8x8[19][i] << 8;
+      |                                                   ^~~~~~~~~~~
+./control.h(186): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  186 |                                 display.col[i] |= font8x8[19][i] << 8;
+      |                                                   ^~~~~~~
+./control.h(200): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  200 |                         display.col[i] &= 0x00FF;
+      |                         ^~~~~~~~~~~
+./control.h(207): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  207 |                 display.col[i] |= font8x8[n][i] << 8;
+      |                 ^~~~~~~~~~~
+./control.h(207): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  207 |                 display.col[i] |= font8x8[n][i] << 8;
+      |                                   ^~~~~~~~~~
+./control.h(207): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  207 |                 display.col[i] |= font8x8[n][i] << 8;
+      |                                   ^~~~~~~
+./control.h(214): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  214 |                 display.col[i] &= 0x00FF;
+      |                 ^~~~~~~~~~~
+main_program_rx.c(2): warning: In file included from...
+./update_data.h(45): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   45 |         data.data[1] = 2;                       // h
+      |         ^~~~~~~~~
+./update_data.h(46): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   46 |         data.data[2] = 0xC;     // :
+      |         ^~~~~~~~~
+./update_data.h(47): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   47 |         data.data[3] = 0;                       // m
+      |         ^~~~~~~~~
+./update_data.h(48): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   48 |         data.data[4] = 0;                       // m
+      |         ^~~~~~~~~
+./update_data.h(49): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   49 |         data.data[5] = 0xC;     // :
+      |         ^~~~~~~~~
+./update_data.h(50): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   50 |         data.data[6] = 0;                       // s
+      |         ^~~~~~~~~
+./update_data.h(51): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   51 |         data.data[7] = 0;                       // s
+      |         ^~~~~~~~~
+./update_data.h(52): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   52 |         data.data[8] = 0x0E;    // (space)
+      |         ^~~~~~~~~
+./update_data.h(53): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   53 |         data.data[9] = 0;                       // n    
+      |         ^~~~~~~~~
+./update_data.h(54): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   54 |         data.data[10] = 0;              // n
+      |         ^~~~~~~~~
+./update_data.h(55): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   55 |         data.data[11] = 0x0D; // .
+      |         ^~~~~~~~~
+./update_data.h(56): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   56 |         data.data[12] = 0;              // n
+      |         ^~~~~~~~~
+./update_data.h(77): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   77 |                 data.data[1] = data.hour % 10;
+      |                 ^~~~~~~~~
+./update_data.h(78): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   78 |                 data.data[3] = data.min / 10;
+      |                 ^~~~~~~~~
+./update_data.h(79): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   79 |                 data.data[4] = data.min % 10;
+      |                 ^~~~~~~~~
+./update_data.h(80): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   80 |                 data.data[6] = data.sec / 10;
+      |                 ^~~~~~~~~
+./update_data.h(81): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   81 |                 data.data[7] = data.sec % 10;
+      |                 ^~~~~~~~~
+./update_data.h(90): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   90 |                         data.data[9] = (char)(data.temperature / 10);
+      |                         ^~~~~~~~~
+./update_data.h(91): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   91 |                         data.data[10] = (char)(data.temperature) % 10;
+      |                         ^~~~~~~~~
+./update_data.h(92): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   92 |                         data.data[12] = (char)(data.temperature * 10) % 10;
+      |                         ^~~~~~~~~
+main_program_rx.c(3): warning: In file included from...
+./display.h(38): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   38 |                 GPIOB->ODR = display.col[display.idx];
+      |                              ^~~~~~~~~~~
+main_program_rx.c(4): warning: In file included from...
+./scroll.h(24): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   24 |                         display.col[i] = 0x00;
+      |                         ^~~~~~~~~~~
+./scroll.h(26): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   26 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 - 1]][i] << (8 + (scroll.data_shift % 8));
+      |                         ^~~~~~~~~~~
+./scroll.h(26): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   26 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 - 1]][i] << (8 + (scroll.data_shift % 8));
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(26): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   26 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 - 1]][i] << (8 + (scroll.data_shift % 8));
+      |                                           ^~~~~~~
+./scroll.h(26): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   26 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 - 1]][i] << (8 + (scroll.data_shift % 8));
+      |                                                   ^~~~~~~~~
+./scroll.h(27): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   27 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8]][i] << (scroll.data_shift % 8);
+      |                         ^~~~~~~~~~~
+./scroll.h(27): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   27 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8]][i] << (scroll.data_shift % 8);
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(27): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   27 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8]][i] << (scroll.data_shift % 8);
+      |                                           ^~~~~~~
+./scroll.h(27): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   27 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8]][i] << (scroll.data_shift % 8);
+      |                                                   ^~~~~~~~~
+./scroll.h(28): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   28 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 + 1]][i] >> (8 - (scroll.data_shift % 8));
+      |                         ^~~~~~~~~~~
+./scroll.h(28): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   28 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 + 1]][i] >> (8 - (scroll.data_shift % 8));
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(28): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   28 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 + 1]][i] >> (8 - (scroll.data_shift % 8));
+      |                                           ^~~~~~~
+./scroll.h(28): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   28 |                         display.col[i] |= font8x8[data.data[scroll.data_shift/8 + 1]][i] >> (8 - (scroll.data_shift % 8));
+      |                                                   ^~~~~~~~~
+./scroll.h(45): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   45 |                         display.col[i] = 0x00;
+      |                         ^~~~~~~~~~~
+./scroll.h(46): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   46 |                         display.col[i] |= font8x8[buffer.item[buffer.idx - 1]][i] << (scroll.data_shift % 8);
+      |                         ^~~~~~~~~~~
+./scroll.h(46): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   46 |                         display.col[i] |= font8x8[buffer.item[buffer.idx - 1]][i] << (scroll.data_shift % 8);
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(46): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   46 |                         display.col[i] |= font8x8[buffer.item[buffer.idx - 1]][i] << (scroll.data_shift % 8);
+      |                                           ^~~~~~~
+./scroll.h(46): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   46 |                         display.col[i] |= font8x8[buffer.item[buffer.idx - 1]][i] << (scroll.data_shift % 8);
+      |                                                   ^~~~~~~~~~~
+./scroll.h(47): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   47 |                         display.col[i] |= font8x8[buffer.item[buffer.idx]][i] << (8 - (scroll.data_shift % 8));
+      |                         ^~~~~~~~~~~
+./scroll.h(47): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   47 |                         display.col[i] |= font8x8[buffer.item[buffer.idx]][i] << (8 - (scroll.data_shift % 8));
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./scroll.h(47): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   47 |                         display.col[i] |= font8x8[buffer.item[buffer.idx]][i] << (8 - (scroll.data_shift % 8));
+      |                                           ^~~~~~~
+./scroll.h(47): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   47 |                         display.col[i] |= font8x8[buffer.item[buffer.idx]][i] << (8 - (scroll.data_shift % 8));
+      |                                                   ^~~~~~~~~~~
+main_program_rx.c(6): warning: In file included from...
+./usart_rx.h(6): warning: In file included from...
+./flash.h(51): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   51 |                 flash_write(flash_page_addr + i*2, (u16)list[i]);
+      |                                                         ^~~~
+./flash.h(58): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   58 |                 list[i] = flash_read(flash_page_addr + i*2);
+      |                 ^~~~
+main_program_rx.c(6): warning: In file included from...
+./usart_rx.h(23): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   23 |         NVIC->ISER[1] |= (1 << 5);
+      |         ^~~~~~~~~~
+C:/Users/gram/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include\core_cm3.h(1392): note: expanded from macro 'NVIC'
+ 1392 | #define NVIC                ((NVIC_Type      *)     NVIC_BASE     )   /*!< NVIC configuration struct */
+      |                             ^
+main_program_rx.c(6): warning: In file included from...
+./usart_rx.h(55): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   55 |                                 buffer.item[buffer.idx] = (int)keyscan.data;
+      |                                 ^~~~~~~~~~~
+./usart_rx.h(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |                                 set_time(buffer.item[1]*10 + buffer.item[2], buffer.item[3]*10 + buffer.item[4], buffer.item[5]*10 + buffer.item[6]);
+      |                                          ^~~~~~~~~~~
+./usart_rx.h(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |                                 set_time(buffer.item[1]*10 + buffer.item[2], buffer.item[3]*10 + buffer.item[4], buffer.item[5]*10 + buffer.item[6]);
+      |                                                              ^~~~~~~~~~~
+./usart_rx.h(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |                                 set_time(buffer.item[1]*10 + buffer.item[2], buffer.item[3]*10 + buffer.item[4], buffer.item[5]*10 + buffer.item[6]);
+      |                                                                              ^~~~~~~~~~~
+./usart_rx.h(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |                                 set_time(buffer.item[1]*10 + buffer.item[2], buffer.item[3]*10 + buffer.item[4], buffer.item[5]*10 + buffer.item[6]);
+      |                                                                                                  ^~~~~~~~~~~
+./usart_rx.h(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |                                 set_time(buffer.item[1]*10 + buffer.item[2], buffer.item[3]*10 + buffer.item[4], buffer.item[5]*10 + buffer.item[6]);
+      |                                                                                                                  ^~~~~~~~~~~
+./usart_rx.h(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |                                 set_time(buffer.item[1]*10 + buffer.item[2], buffer.item[3]*10 + buffer.item[4], buffer.item[5]*10 + buffer.item[6]);
+      |                                                                                                                                      ^~~~~~~~~~~
+./usart_rx.h(66): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   66 |                                 buffer.item[buffer.idx] = (int)keyscan.data;
+      |                                 ^~~~~~~~~~~
+./usart_rx.h(75): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   75 |                                                 if(passcode.item[i] != buffer.item[i]) {
+      |                                                    ^~~~~~~~~~~~~
+./usart_rx.h(75): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   75 |                                                 if(passcode.item[i] != buffer.item[i]) {
+      |                                                                        ^~~~~~~~~~~
+./usart_rx.h(99): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   99 |                                 buffer.item[buffer.idx] = (int)keyscan.data;
+      |                                 ^~~~~~~~~~~
+./usart_rx.h(104): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  104 |                                         passcode.item[i] = buffer.item[i];
+      |                                         ^~~~~~~~~~~~~
+./usart_rx.h(104): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  104 |                                         passcode.item[i] = buffer.item[i];
+      |                                                            ^~~~~~~~~~~
+124 warnings generated.
+compiling main_program_rx.c...
+linking...
+Program Size: Code=7148 RO-data=268 RW-data=164 ZI-data=1832  
+".\Objects\project.axf" - 0 Error(s), 126 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103RB
+  ./RTE/_Target_1
+  C:/Users/gram/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/gram/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: Keil::Device:Startup@1.0.0
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
